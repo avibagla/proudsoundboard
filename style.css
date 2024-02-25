@@ -1,0 +1,194 @@
+/* borrowed Glitch's values set as CSS variables */
+:root {
+  /*   --color-bg: #69f7be; */
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027") format("opentype");
+}
+
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437") format("opentype");
+}
+
+/* Our remix on glitch button */
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color:#03B5AA;
+  font-family: HK Grotesk;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+  line-height: 105%;
+  margin: 0;
+}
+
+.top {
+  padding: 0 10vw;
+}
+
+.soundboard {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+tr {
+  border: 10px solid #D60270;
+    /* box-shadow: 8px 8px #0038A8; */
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 10px solid #D60270;
+  box-shadow: 2px 2px #0038A8;
+  cursor: pointer;
+
+}
+
+button:hover{
+  box-shadow: 5px 5px #0038A8;
+}
+
+button:active{
+  background-color: #8CBA80;
+  box-shadow: 5px 5px black;
+}
+
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 1.8em;
+  text-align: center;
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  /* padding: 0.5rem 1rem; */
+  transition: 200ms;
+}
+
+/* Subheading */
+h2 {
+  color: #9B4F96;
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+.footer p {
+  text-align: center;
+}
+
+
+.image-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  border: 10px solid #D60270;
+  box-shadow: 8px 8px #0038A8;
+  border-radius: 5%;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
