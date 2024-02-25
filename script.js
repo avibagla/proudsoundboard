@@ -10,15 +10,15 @@ $(document).ready(function () {
     }
   });
 
-  $('button').on('click', function () {
-    var id = this.id.slice(-1);
+  // $('button').on('click', function () {
+  //   var id = this.id.slice(-1);
 
-    var soundElem = document.getElementById(`sound` + id);
-    if (soundElem.paused) {
-      soundElem.play();
-    } else {
-      soundElem.currentTime = 0;
-    }
-  });
+  //   var soundElem = document.getElementById(`sound` + id);
+  //   if (soundElem.paused) {
+  //     soundElem.play();
+  //   } else {
+  //     soundElem.currentTime = 0;
+  //   }
+  // });
 
 });
